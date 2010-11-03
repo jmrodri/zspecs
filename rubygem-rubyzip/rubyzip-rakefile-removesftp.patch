@@ -1,0 +1,11 @@
+diff -up gems/rubyzip-0.9.4/Rakefile.removesftp gems/rubyzip-0.9.4/Rakefile
+--- gems/rubyzip-0.9.4/Rakefile.removesftp	2010-08-19 12:23:19.975476619 -0400
++++ gems/rubyzip-0.9.4/Rakefile	2010-08-19 12:23:24.444539689 -0400
+@@ -7,7 +7,6 @@ require 'rake/packagetask'
+ require 'rake/gempackagetask'
+ require 'rake/rdoctask'
+ require 'rake/contrib/sshpublisher'
+-require 'net/sftp'
+ 
+ PKG_NAME = 'rubyzip'
+ PKG_VERSION = File.read('lib/zip/zip.rb').match(/\s+VERSION\s*=\s*'(.*)'/)[1]
