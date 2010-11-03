@@ -11,6 +11,7 @@ Group: Development/Languages
 License: GPLv2 or Ruby
 URL: http://rubyzip.sourceforge.net/
 Source0: http://gems.rubyforge.org/gems/%{gemname}-%{version}.gem
+Patch0: rubyzip-commentsize.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Requires: ruby(abi) = 1.8
 Requires: rubygems
@@ -41,6 +42,9 @@ rm -rf %{buildroot}
 mkdir -p %{buildroot}%{gemdir}
 gem install --local --install-dir %{buildroot}%{gemdir} \
             --force --rdoc %{SOURCE0}
+pushd %{buildroot}%{gemdir}
+patch -p0 < %{PATCH0}
+popd
 
 chmod 755 %{buildroot}%{geminstdir}/install.rb
 

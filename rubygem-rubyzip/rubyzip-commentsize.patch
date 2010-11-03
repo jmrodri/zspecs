@@ -1,6 +1,7 @@
---- ./usr/lib/ruby/gems/1.8/gems/rubyzip-0.9.4/lib/zip/zip.rb.orig	2010-05-13 12:41:47.291512272 -0400
-+++ ./usr/lib/ruby/gems/1.8/gems/rubyzip-0.9.4/lib/zip/zip.rb	2010-05-13 12:42:00.519514110 -0400
-@@ -729,7 +729,7 @@
+diff -up gems/rubyzip-0.9.4/lib/zip/zip.rb.commentsize gems/rubyzip-0.9.4/lib/zip/zip.rb
+--- gems/rubyzip-0.9.4/lib/zip/zip.rb.commentsize	2010-11-03 17:54:51.253084761 -0400
++++ gems/rubyzip-0.9.4/lib/zip/zip.rb	2010-11-03 17:55:31.068130146 -0400
+@@ -729,7 +729,7 @@ module Zip
  	@size                             ,
  	@name  ?  @name.length  : 0       ,
  	@extra ? @extra.c_dir_length : 0  ,
