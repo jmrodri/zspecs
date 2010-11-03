@@ -12,6 +12,7 @@ Group: Development/Languages
 License: GPLv2+ or Ruby
 URL: http://buildr.apache.org/
 Source0: http://rubygems.org/gems/%{gemname}-%{version}.gem
+Patch0: buildr-1.4.3-fixversion.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Requires: rubygems
 Requires: rubygem(rake) >= 0.8.7
@@ -24,8 +25,8 @@ Requires: rubygem(json_pure) >= 1.4.3
 Requires: rubygem(rubyforge) >= 2.0.3
 Requires: rubygem(hoe) >= 2.3.3
 Requires: rubygem(rjb) >= 1.2.5
-#Requires: rubygem(atoulme-Antwrap) = 0.7.1
-Requires: rubygem(Antwrap) >= 0.7.0
+Requires: rubygem(atoulme-Antwrap) >= 0.7.1
+#Requires: rubygem(Antwrap) >= 0.7.0
 Requires: rubygem(rspec) >= 1.2.9
 Requires: rubygem(xml-simple) >= 1.0.12
 Requires: rubygem(minitar) >= 0.5.3
@@ -50,6 +51,9 @@ rm -rf %{buildroot}
 mkdir -p %{buildroot}%{gemdir}
 gem install --local --install-dir %{buildroot}%{gemdir} \
             --force --rdoc %{SOURCE0}
+pushd %{buildroot}%{gemdir}
+patch -p0 < %{PATCH0}
+popd
 mkdir -p %{buildroot}/%{_bindir}
 mv %{buildroot}%{gemdir}/bin/* %{buildroot}/%{_bindir}
 rmdir %{buildroot}%{gemdir}/bin
