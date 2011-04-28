@@ -1,4 +1,4 @@
-# Generated from rjb-1.2.9.gem by gem2rpm -*- rpm-spec -*-
+# Generated from rjb-1.3.4.gem by gem2rpm -*- rpm-spec -*-
 %define ruby_sitelib %(ruby -rrbconfig -e "puts Config::CONFIG['sitelibdir']")
 %define gemdir %(ruby -rubygems -e 'puts Gem::dir' 2>/dev/null)
 %define gemname rjb
@@ -6,7 +6,7 @@
 
 Summary: Ruby Java bridge
 Name: rubygem-%{gemname}
-Version: 1.2.9
+Version: 1.3.4
 Release: 1%{?dist}
 Group: Development/Languages
 License: GPLv2+ or Ruby
@@ -44,5 +44,7 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Thu Apr 28 2011 Jesus Rodriguez <jesusr@transam.devel.redhat.com> - 1.3.4-1
+- Upgrade to 1.3.4
 * Tue Nov 02 2010 Jesus Rodriguez <jesusr@transam.devel.redhat.com> - 1.2.9-1
 - Initial package
