@@ -12,7 +12,7 @@ Group: Development/Languages
 License: GPLv2+ or Ruby
 URL: http://buildr.apache.org/
 Source0: http://rubygems.org/gems/%{gemname}-%{version}.gem
-Patch0: buildr-1.4.3-fixversion.patch
+Patch0: buildr-1.4.5-fixversion.patch
 Patch1: buildr-1.4.3-fixwarning.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Requires: rubygems
@@ -58,7 +58,9 @@ gem install --local --install-dir %{buildroot}%{gemdir} \
             --force --rdoc %{SOURCE0}
 pushd %{buildroot}%{gemdir}
 patch -p0 < %{PATCH0}
-patch -p0 < %{PATCH1}
+popd
+pushd %{buildroot}%{gemdir}/gems/buildr-%{version}/
+patch -p2 < %{PATCH1}
 popd
 mkdir -p %{buildroot}/%{_bindir}
 mv %{buildroot}%{gemdir}/bin/* %{buildroot}/%{_bindir}
