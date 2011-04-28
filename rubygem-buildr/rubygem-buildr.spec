@@ -32,7 +32,6 @@ Requires: rubygem(diff-lcs) >= 1.1.2
 Requires: rubygem(rspec-expectations) >= 2.1.0
 Requires: rubygem(rspec-mocks) >= 2.1.0
 Requires: rubygem(rspec-core) >= 2.1.0
-Requires: rubygem(rspec) >= 2.1.0
 Requires: rubygem(xml-simple) >= 1.0.12
 Requires: rubygem(minitar) >= 0.5.3
 BuildRequires: rubygems

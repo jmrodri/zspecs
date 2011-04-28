@@ -1,7 +1,7 @@
 diff -up specifications/buildr-1.4.5.gemspec.fixversion specifications/buildr-1.4.5.gemspec
 --- specifications/buildr-1.4.5.gemspec.fixversion	2011-04-28 11:51:36.276859966 -0400
-+++ specifications/buildr-1.4.5.gemspec	2011-04-28 11:59:34.314423244 -0400
-@@ -31,74 +31,74 @@ for those one-off tasks, with a language
++++ specifications/buildr-1.4.5.gemspec	2011-04-28 14:14:40.659423557 -0400
+@@ -31,74 +31,71 @@ for those one-off tasks, with a language
      s.specification_version = 3
  
      if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
@@ -38,7 +38,6 @@ diff -up specifications/buildr-1.4.5.gemspec.fixversion specifications/buildr-1.
 +      s.add_runtime_dependency(%q<rspec-expectations>, [">= 2.1.0"])
 +      s.add_runtime_dependency(%q<rspec-mocks>, [">= 2.1.0"])
 +      s.add_runtime_dependency(%q<rspec-core>, [">= 2.1.0"])
-+      s.add_runtime_dependency(%q<rspec>, [">= 2.1.0"])
 +      s.add_runtime_dependency(%q<xml-simple>, [">= 1.0.12"])
 +      s.add_runtime_dependency(%q<minitar>, [">= 0.5.3"])
        s.add_development_dependency(%q<jekyll>, ["~> 0.6.2"])
@@ -80,7 +79,6 @@ diff -up specifications/buildr-1.4.5.gemspec.fixversion specifications/buildr-1.
 +      s.add_dependency(%q<rspec-expectations>, [">= 2.1.0"])
 +      s.add_dependency(%q<rspec-mocks>, [">= 2.1.0"])
 +      s.add_dependency(%q<rspec-core>, [">= 2.1.0"])
-+      s.add_dependency(%q<rspec>, [">= 2.1.0"])
 +      s.add_dependency(%q<xml-simple>, [">= 1.0.12"])
 +      s.add_dependency(%q<minitar>, [">= 0.5.3"])
        s.add_dependency(%q<jekyll>, ["~> 0.6.2"])
@@ -123,7 +121,6 @@ diff -up specifications/buildr-1.4.5.gemspec.fixversion specifications/buildr-1.
 +    s.add_dependency(%q<rspec-expectations>, [">= 2.1.0"])
 +    s.add_dependency(%q<rspec-mocks>, [">= 2.1.0"])
 +    s.add_dependency(%q<rspec-core>, [">= 2.1.0"])
-+    s.add_dependency(%q<rspec>, [">= 2.1.0"])
 +    s.add_dependency(%q<xml-simple>, [">= 1.0.12"])
 +    s.add_dependency(%q<minitar>, [">= 0.5.3"])
      s.add_dependency(%q<jekyll>, ["~> 0.6.2"])
