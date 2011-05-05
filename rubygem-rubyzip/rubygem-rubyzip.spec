@@ -7,7 +7,7 @@
 Summary: rubyzip is a ruby module for reading and writing zip files
 Name: rubygem-%{gemname}
 Version: 0.9.1
-Release: 1%{?dist}
+Release: 2%{?dist}
 Group: Development/Languages
 License: GPLv2+ or Ruby
 URL: http://rubyzip.sourceforge.net/
@@ -44,5 +44,8 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Thu May 05 2011 jesus m rodriguez <jmrodri@gmail.com> 0.9.1-2
+- new package built with tito
+
 * Fri Nov 05 2010 Jesus Rodriguez <jesusr@transam.devel.redhat.com> - 0.9.1-1
 - Initial package
