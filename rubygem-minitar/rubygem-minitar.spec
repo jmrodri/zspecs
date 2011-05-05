@@ -7,7 +7,7 @@
 Summary: Provides POSIX tarchive management from Ruby programs
 Name: rubygem-%{gemname}
 Version: 0.5.3
-Release: 1%{?dist}
+Release: 2%{?dist}
 Group: Development/Languages
 License: GPLv2+ or Ruby
 URL: http://rubyforge.org/projects/ruwiki/
@@ -55,5 +55,8 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Thu May 05 2011 jesus m rodriguez <jmrodri@gmail.com> 0.5.3-2
+- new package built with tito
+
 * Tue Nov 02 2010 Jesus Rodriguez <jesusr@transam.devel.redhat.com> - 0.5.3-1
 - Initial package
