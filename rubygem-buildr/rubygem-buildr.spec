@@ -7,7 +7,7 @@
 Summary: Build like you code
 Name: rubygem-%{gemname}
 Version: 1.4.5
-Release: 1%{?dist}
+Release: 2%{?dist}
 Group: Development/Languages
 License: GPLv2+ or Ruby
 URL: http://buildr.apache.org/
@@ -83,6 +83,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Thu May 05 2011 jesus m rodriguez <jmrodri@gmail.com> 1.4.5-2
+- build buildr with tito
+
 * Thu Apr 28 2011 Jesus Rodriguez <jesusr@transam.devel.redhat.com> - 1.4.5-1
 - Upgrade to 1.4.5
 * Mon Nov 01 2010 Jesus Rodriguez <jesusr@transam.devel.redhat.com> - 1.4.3-1
