@@ -7,7 +7,7 @@
 Summary: A Ruby module that wraps the Apache Ant build tool. Antwrap can be used to invoke Ant Tasks from a Ruby or a JRuby script
 Name: rubygem-%{gemname}
 Version: 0.7.1
-Release: 1%{?dist}
+Release: 2%{?dist}
 Group: Development/Languages
 License: GPLv2+ or Ruby
 URL: http://rubyforge.org/projects/antwrap/
@@ -60,5 +60,8 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Thu May 05 2011 jesus m rodriguez <jmrodri@gmail.com> 0.7.1-2
+- new package built with tito
+
 * Wed Nov 03 2010 Jesus Rodriguez <jesusr@transam.devel.redhat.com> - 0.7.1-1
 - Initial package
