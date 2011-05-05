@@ -6,7 +6,7 @@
 
 Summary: Ruby Java bridge
 Name: rubygem-%{gemname}
-Version: 1.3.4
+Version: 1.3.5
 Release: 1%{?dist}
 Group: Development/Languages
 License: GPLv2+ or Ruby
@@ -44,6 +44,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Thu May 05 2011 jesus m rodriguez <jmrodri@gmail.com> 1.3.5-1
+- building rubygem-rjb for the first time.
+
 * Thu Apr 28 2011 Jesus Rodriguez <jesusr@transam.devel.redhat.com> - 1.3.4-1
 - Upgrade to 1.3.4
 * Tue Nov 02 2010 Jesus Rodriguez <jesusr@transam.devel.redhat.com> - 1.2.9-1
