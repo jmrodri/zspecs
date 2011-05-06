@@ -7,7 +7,7 @@
 Summary: OAuth Core Ruby implementation
 Name: rubygem-%{gemname}
 Version: 0.4.4
-Release: 1%{?dist}
+Release: 2%{?dist}
 Group: Development/Languages
 License: GPLv2+ or Ruby
 URL: http://oauth.rubyforge.org/
@@ -52,5 +52,8 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Thu May 05 2011 jesus m rodriguez <jmrodri@gmail.com> 0.4.4-2
+- new package built with tito
+
 * Thu May 05 2011 jesus m. rodriguez <jesusr@redhat.com> - 0.4.4-1
 - Initial package
