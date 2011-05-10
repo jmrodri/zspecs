@@ -6,7 +6,6 @@ Group: Development/Languages
 License: GPLv2
 URL: http://www.ngolde.de/tpp.html
 Source0: http://www.ngolde.de/download/tpp-1.3.1.tar.gz
-#Patch0: %{name}-%{version}-install.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Requires: ruby(abi) >= 1.8
 Requires: ruby-ncurses
@@ -19,8 +18,7 @@ description format and then shown on any text terminal that is supported by
 ncurses - ranging from an old VT100 to the Linux framebuffer to an xterm.
 
 %prep
-%setup 
-#%patch0 -p1
+%setup -q
 
 %build
 
