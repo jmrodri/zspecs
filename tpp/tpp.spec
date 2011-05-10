@@ -1,7 +1,7 @@
 Summary: ncurses-based presentation tool
 Name: tpp
 Version: 1.3.1
-Release: 1%{?dist}
+Release: 2%{?dist}
 Group: Development/Languages
 License: GPLv2
 URL: http://www.ngolde.de/tpp.html
@@ -43,5 +43,8 @@ rm -rf %{buildroot}
 %doc %{_datadir}/doc/%{name}-%{version}
 
 %changelog
+* Mon May 09 2011 jesus m rodriguez <jmrodri@gmail.com> 1.3.1-2
+- new package built with tito
+
 * Mon May 09 2011 Jesus Rodriguez <jmrodri@gmail.com> - 1.3.1-1
 - Initial package
