@@ -32,7 +32,7 @@ install -d -m 755 $RPM_BUILD_ROOT%{_mandir}/man1
 make install prefix=$RPM_BUILD_ROOT%{_usr} DOCPATH=$RPM_BUILD_ROOT%{_datadir}/doc/%{name}-%{version}
 
 %clean
-rm -rf %{buildroot}
+rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-, root, root, -)
