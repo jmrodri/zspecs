@@ -2,7 +2,7 @@ Summary: ncurses-based presentation tool
 Name: tpp
 Version: 1.3.1
 Release: 4%{?dist}
-Group: Development/Languages
+Group: Applications/Productivity
 License: GPLv2
 URL: http://www.ngolde.de/tpp.html
 Source0: http://www.ngolde.de/download/tpp-1.3.1.tar.gz
