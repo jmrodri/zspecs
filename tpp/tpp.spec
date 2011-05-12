@@ -5,7 +5,7 @@ Release: 4%{?dist}
 Group: Applications/Productivity
 License: GPLv2
 URL: http://www.ngolde.de/tpp.html
-Source0: http://www.ngolde.de/download/tpp-1.3.1.tar.gz
+Source0: http://www.ngolde.de/download/%{name}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Requires: ruby(abi) >= 1.8
 Requires: ruby-ncurses
