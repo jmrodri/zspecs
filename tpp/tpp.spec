@@ -12,7 +12,7 @@ Requires: ruby-ncurses
 BuildArch: noarch
 
 %description
-tpp stands for text presentation program and is an ncurses-based presentation
+tpp stands for text presentation program and is a ncurses-based presentation
 tool. The presentation can be written with your favorite editor in a simple
 description format and then shown on any text terminal that is supported by
 ncurses - ranging from an old VT100 to the Linux framebuffer to an xterm.
@@ -37,15 +37,15 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-, root, root, -)
 %{_bindir}/tpp
-%doc %{_mandir}/man1/tpp.1.gz
+%{_mandir}/man1/tpp.1.*
 %doc %{_datadir}/doc/%{name}-%{version}
 
 %changelog
 * Wed May 11 2011 jesus m. rodriguez <jesusr@redhat.com> 1.3.1-4
-- don't use RPM_BUILD_ROOT and buildroot (jesusr@redhat.com)
+- don't use RPM_BUILD_ROOT and buildroot
 
 * Mon May 09 2011 jesus m rodriguez <jmrodri@gmail.com> 1.3.1-3
-- rpmlint: setup quite, remove patch0 (jmrodri@gmail.com)
+- rpmlint: setup quite, remove patch0
 
 * Mon May 09 2011 jesus m rodriguez <jmrodri@gmail.com> 1.3.1-2
 - new package built with tito
