@@ -1,7 +1,7 @@
 Summary: A ncurses-based presentation tool
 Name: tpp
 Version: 1.3.1
-Release: 5%{?dist}
+Release: 6%{?dist}
 Group: Applications/Productivity
 License: GPLv2
 URL: http://www.ngolde.de/tpp.html
@@ -54,6 +54,9 @@ rm -rf $RPM_BUILD_ROOT
 %doc contrib/
 
 %changelog
+* Thu May 12 2011 jesus m. rodriguez <jesusr@redhat.com> 1.3.1-6
+- fix rpmlint errors/warnings
+
 * Thu May 12 2011 jesus m. rodriguez <jesusr@redhat.com> 1.3.1-5
 - reworked install section, listed out docs, fixed man page
 - fix typo & remove email addresses.
