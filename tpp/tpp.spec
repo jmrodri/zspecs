@@ -1,7 +1,7 @@
 Summary: ncurses-based presentation tool
 Name: tpp
 Version: 1.3.1
-Release: 4%{?dist}
+Release: 5%{?dist}
 Group: Applications/Productivity
 License: GPLv2
 URL: http://www.ngolde.de/tpp.html
@@ -46,6 +46,12 @@ rm -rf $RPM_BUILD_ROOT
 %doc contrib/
 
 %changelog
+* Thu May 12 2011 jesus m. rodriguez <jesusr@redhat.com> 1.3.1-5
+- reworked install section, listed out docs, fixed man page
+- fix typo & remove email addresses.
+- use name & version macros in source url
+- change Group to Applications/Productivity
+
 * Wed May 11 2011 jesus m. rodriguez <jesusr@redhat.com> 1.3.1-4
 - don't use RPM_BUILD_ROOT and buildroot
 
