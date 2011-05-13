@@ -25,11 +25,10 @@ ncurses - ranging from an old VT100 to the Linux framebuffer to an xterm.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d -m 755 $RPM_BUILD_ROOT%{_bindir}
-install -d -m 755 $RPM_BUILD_ROOT%{_datadir}/%{name}
-install -d -m 755 $RPM_BUILD_ROOT%{_datadir}/%{name}
-install -d -m 755 $RPM_BUILD_ROOT%{_datadir}/doc/%{name}-%{version}
-install -d -m 755 $RPM_BUILD_ROOT%{_mandir}/man1
-make install prefix=$RPM_BUILD_ROOT%{_usr} DOCPATH=$RPM_BUILD_ROOT%{_datadir}/doc/%{name}-%{version}
+install -p tpp.rb $RPM_BUILD_ROOT%{_bindir}/tpp
+install -d -m 755 $RPM_BUILD_ROOT%{_emacs_sitelispdir}
+install -d -m 755 $RPM_BUILD_ROOT%{_mandir}/man1/
+install -p doc/tpp.1 $RPM_BUILD_ROOT%{_mandir}/man1/tpp.1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -37,8 +36,14 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-, root, root, -)
 %{_bindir}/tpp
-%{_mandir}/man1/tpp.1.*
-%doc %{_datadir}/doc/%{name}-%{version}
+%{_mandir}/man1/tpp.1*
+%doc DESIGN
+%doc CHANGES
+%doc COPYING
+%doc README
+%doc THANKS
+%doc examples/
+%doc contrib/
 
 %changelog
 * Wed May 11 2011 jesus m. rodriguez <jesusr@redhat.com> 1.3.1-4
