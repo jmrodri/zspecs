@@ -1,4 +1,4 @@
-Summary: ncurses-based presentation tool
+Summary: A ncurses-based presentation tool
 Name: tpp
 Version: 1.3.1
 Release: 5%{?dist}
@@ -30,13 +30,21 @@ install -d -m 755 $RPM_BUILD_ROOT%{_emacs_sitelispdir}
 install -d -m 755 $RPM_BUILD_ROOT%{_mandir}/man1/
 install -p doc/tpp.1 $RPM_BUILD_ROOT%{_mandir}/man1/tpp.1
 
+pushd examples
+for tppfile in *.tpp; do 
+  iconv -f ISO-8859-1 -t UTF-8 -o $tppfile.new $tppfile && \
+  touch -r $tppfile $tppfile.new && \
+  mv $tppfile.new $tppfile
+done
+popd
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-, root, root, -)
 %{_bindir}/tpp
-%{_mandir}/man1/tpp.1*
+%attr(644, -, -) %{_mandir}/man1/tpp.1*
 %doc DESIGN
 %doc CHANGES
 %doc COPYING
