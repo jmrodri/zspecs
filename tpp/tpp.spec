@@ -19,6 +19,13 @@ ncurses - ranging from an old VT100 to the Linux framebuffer to an xterm.
 
 %prep
 %setup -q
+pushd examples
+for tppfile in *.tpp; do 
+  iconv -f ISO-8859-1 -t UTF-8 -o $tppfile.new $tppfile && \
+  touch -r $tppfile $tppfile.new && \
+  mv $tppfile.new $tppfile
+done
+popd
 
 %build
 
@@ -29,14 +36,6 @@ install -p tpp.rb $RPM_BUILD_ROOT%{_bindir}/tpp
 install -d -m 755 $RPM_BUILD_ROOT%{_emacs_sitelispdir}
 install -d -m 755 $RPM_BUILD_ROOT%{_mandir}/man1/
 install -p doc/tpp.1 $RPM_BUILD_ROOT%{_mandir}/man1/tpp.1
-
-pushd examples
-for tppfile in *.tpp; do 
-  iconv -f ISO-8859-1 -t UTF-8 -o $tppfile.new $tppfile && \
-  touch -r $tppfile $tppfile.new && \
-  mv $tppfile.new $tppfile
-done
-popd
 
 %clean
 rm -rf $RPM_BUILD_ROOT
