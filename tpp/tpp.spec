@@ -6,7 +6,6 @@ Group: Applications/Productivity
 License: GPLv2
 URL: http://www.ngolde.de/tpp.html
 Source0: http://www.ngolde.de/download/%{name}-%{version}.tar.gz
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires: emacs
 Requires: ruby(abi) >= 1.8
 Requires: ruby-ncurses
@@ -33,7 +32,6 @@ popd
 %{_emacs_bytecompile} contrib/tpp-mode.el
 
 %install
-rm -rf $RPM_BUILD_ROOT
 install -d -m 755 $RPM_BUILD_ROOT%{_bindir}
 install -p tpp.rb $RPM_BUILD_ROOT%{_bindir}/tpp
 install -d -m 755 $RPM_BUILD_ROOT%{_emacs_sitelispdir}
@@ -42,9 +40,6 @@ install -d -m 755 $RPM_BUILD_ROOT%{_datadir}/vim/vimfiles/syntax
 install -p -m 644 contrib/tpp.vim $RPM_BUILD_ROOT%{_datadir}/vim/vimfiles/syntax
 install -d -m 755 $RPM_BUILD_ROOT%{_mandir}/man1/
 install -p -m 644 doc/tpp.1 $RPM_BUILD_ROOT%{_mandir}/man1/tpp.1
-
-%clean
-rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-, root, root, -)
