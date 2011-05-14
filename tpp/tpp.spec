@@ -1,7 +1,7 @@
 Summary: A ncurses-based presentation tool
 Name: tpp
 Version: 1.3.1
-Release: 6%{?dist}
+Release: 7%{?dist}
 Group: Applications/Productivity
 License: GPLv2
 URL: http://www.ngolde.de/tpp.html
@@ -56,6 +56,11 @@ install -p -m 644 doc/tpp.1 $RPM_BUILD_ROOT%{_mandir}/man1/tpp.1
 %{_datadir}/vim/vimfiles/syntax/tpp.vim
 
 %changelog
+* Fri May 13 2011 jesus m rodriguez <jmrodri@gmail.com> 1.3.1-7
+- remove buildroot stuff
+- install vim and emacs files; fix manpage perms
+- move iconv to prep section
+
 * Thu May 12 2011 jesus m. rodriguez <jesusr@redhat.com> 1.3.1-6
 - fix rpmlint errors/warnings
 
