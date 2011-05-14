@@ -7,8 +7,10 @@ License: GPLv2
 URL: http://www.ngolde.de/tpp.html
 Source0: http://www.ngolde.de/download/%{name}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+BuildRequires: emacs
 Requires: ruby(abi) >= 1.8
 Requires: ruby-ncurses
+Requires: vim-filesystem
 BuildArch: noarch
 
 %description
@@ -28,14 +30,18 @@ done
 popd
 
 %build
+%{_emacs_bytecompile} contrib/tpp-mode.el
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d -m 755 $RPM_BUILD_ROOT%{_bindir}
 install -p tpp.rb $RPM_BUILD_ROOT%{_bindir}/tpp
 install -d -m 755 $RPM_BUILD_ROOT%{_emacs_sitelispdir}
+install -p -m 644 contrib/tpp-mode* $RPM_BUILD_ROOT%{_emacs_sitelispdir}
+install -d -m 755 $RPM_BUILD_ROOT%{_datadir}/vim/vimfiles/syntax
+install -p -m 644 contrib/tpp.vim $RPM_BUILD_ROOT%{_datadir}/vim/vimfiles/syntax
 install -d -m 755 $RPM_BUILD_ROOT%{_mandir}/man1/
-install -p doc/tpp.1 $RPM_BUILD_ROOT%{_mandir}/man1/tpp.1
+install -p -m 644 doc/tpp.1 $RPM_BUILD_ROOT%{_mandir}/man1/tpp.1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -43,7 +49,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-, root, root, -)
 %{_bindir}/tpp
-%attr(644, -, -) %{_mandir}/man1/tpp.1*
+%{_mandir}/man1/tpp.1*
+%{_emacs_sitelispdir}/tpp-mode*
 %doc DESIGN
 %doc CHANGES
 %doc COPYING
@@ -51,6 +58,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc THANKS
 %doc examples/
 %doc contrib/
+%{_datadir}/vim/vimfiles/syntax/tpp.vim
 
 %changelog
 * Thu May 12 2011 jesus m. rodriguez <jesusr@redhat.com> 1.3.1-6
