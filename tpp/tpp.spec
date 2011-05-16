@@ -10,6 +10,9 @@ BuildRequires: emacs
 Requires: ruby(abi) >= 1.8
 Requires: ruby-ncurses
 Requires: vim-filesystem
+%if 0%{?fedora} >= 15
+Requires: emacs-filesystem >= %{_emacs_version} 
+%endif
 BuildArch: noarch
 
 %description
