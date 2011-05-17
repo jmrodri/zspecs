@@ -7,7 +7,7 @@
 Summary: Ruby Java bridge
 Name: rubygem-%{gemname}
 Version: 1.3.4
-Release: 2%{?dist}
+Release: 3%{?dist}
 Group: Development/Languages
 License: GPLv2+
 URL: http://rjb.rubyforge.org/
@@ -49,6 +49,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Tue May 17 2011 jesus m. rodriguez <jesusr@redhat.com> 1.3.4-3
+- requires ruby-devel & java-devel, move gem install to build
+
 * Thu May 05 2011 jesus m rodriguez <jmrodri@gmail.com> 1.3.4-2
 - build rjb with tito
 
