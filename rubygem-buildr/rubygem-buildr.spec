@@ -86,11 +86,6 @@ rm -rf %{buildroot}
 
 
 %changelog
-* Wed May 18 2011 jesus m rodriguez <jmrodri@gmail.com> 1.4.5-3
-- rpmlint: remove hidden file
-- rpmlint: remove backup files
-- rpmlint: remove exec flag from file
-
 * Thu May 05 2011 jesus m rodriguez <jmrodri@gmail.com> 1.4.5-2
 - build buildr with tito
 
