@@ -7,7 +7,7 @@
 Summary: Build like you code
 Name: rubygem-%{gemname}
 Version: 1.4.5
-Release: 2%{?dist}
+Release: 3%{?dist}
 Group: Development/Languages
 License: GPLv2+ or Ruby
 URL: http://buildr.apache.org/
@@ -86,6 +86,11 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Wed May 18 2011 jesus m rodriguez <jmrodri@gmail.com> 1.4.5-3
+- rpmlint: remove hidden file
+- rpmlint: remove backup files
+- rpmlint: remove exec flag from file
+
 * Thu May 05 2011 jesus m rodriguez <jmrodri@gmail.com> 1.4.5-2
 - build buildr with tito
 
