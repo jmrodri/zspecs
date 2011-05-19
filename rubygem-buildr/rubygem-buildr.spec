@@ -66,6 +66,7 @@ mv %{buildroot}%{gemdir}/bin/* %{buildroot}/%{_bindir}
 rmdir %{buildroot}%{gemdir}/bin
 find %{buildroot}%{geminstdir}/bin -type f | xargs chmod a+x
 chmod -x %{buildroot}%{gemdir}/gems/%{gemname}-%{version}/spec/core/extension_spec.rb
+find %{buildroot}%{geminstdir}/ -name '#*#' -exec rm -f {} \;
 
 %clean
 rm -rf %{buildroot}
