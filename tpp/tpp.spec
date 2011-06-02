@@ -58,7 +58,6 @@ install -p -m 644 doc/tpp.1 $RPM_BUILD_ROOT%{_mandir}/man1/tpp.1
 %doc README
 %doc THANKS
 %doc examples/
-%doc contrib/
 %{_datadir}/vim/vimfiles/syntax/tpp.vim
 
 %changelog
