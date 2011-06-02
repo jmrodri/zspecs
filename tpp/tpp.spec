@@ -48,6 +48,9 @@ install -p -m 644 doc/tpp.1 $RPM_BUILD_ROOT%{_mandir}/man1/tpp.1
 %defattr(-, root, root, -)
 %{_bindir}/tpp
 %{_mandir}/man1/tpp.1*
+%if 0%{?fedora} < 15
+%dir %{_emacs_sitelispdir}/                                       
+%endif
 %{_emacs_sitelispdir}/tpp-mode*
 %doc DESIGN
 %doc CHANGES
