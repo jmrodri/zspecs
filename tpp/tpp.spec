@@ -1,7 +1,7 @@
 Summary: A ncurses-based presentation tool
 Name: tpp
 Version: 1.3.1
-Release: 8%{?dist}
+Release: 9%{?dist}
 Group: Applications/Productivity
 License: GPLv2
 URL: http://www.ngolde.de/tpp.html
@@ -61,6 +61,11 @@ install -p -m 644 doc/tpp.1 $RPM_BUILD_ROOT%{_mandir}/man1/tpp.1
 %{_datadir}/vim/vimfiles/syntax/tpp.vim
 
 %changelog
+* Wed Jun 01 2011 jesus m rodriguez <jmrodri@gmail.com> 1.3.1-9
+- added email address to the changelog
+- removed doc contrib from files section
+- guarantee the ownership of _emacs_sitelispdir for F<15
+
 * Mon May 16 2011 jesus m. rodriguez <jmrodri@gmail.com> 1.3.1-8
 - require emacs-filesystem for F15 or later
 
