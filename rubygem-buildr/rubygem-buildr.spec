@@ -6,8 +6,8 @@
 
 Summary: Build like you code
 Name: rubygem-%{gemname}
-Version: 1.4.5
-Release: 4%{?dist}
+Version: 1.4.6
+Release: 1%{?dist}
 Group: Development/Languages
 License: GPLv2+ or Ruby
 URL: http://buildr.apache.org/
