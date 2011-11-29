@@ -7,7 +7,7 @@
 Summary: Build like you code
 Name: rubygem-%{gemname}
 Version: 1.4.6
-Release: 2%{?dist}
+Release: 3%{?dist}
 Group: Development/Languages
 License: GPLv2+ or Ruby
 URL: http://buildr.apache.org/
@@ -88,6 +88,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Tue Nov 29 2011 jesus m. rodriguez <jesusr@redhat.com> 1.4.6-3
+- remove rspec since rspec-core takes care of it.
+
 * Tue Nov 29 2011 jesus m. rodriguez <jesusr@redhat.com> 1.4.6-2
 - upgrade to rubyzip 0.9.4
 - fix up gemspec patch
