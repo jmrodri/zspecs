@@ -1,7 +1,7 @@
-diff -up specifications/buildr-1.4.5.gemspec.fixversion specifications/buildr-1.4.5.gemspec
---- specifications/buildr-1.4.5.gemspec.fixversion	2011-04-28 11:51:36.276859966 -0400
-+++ specifications/buildr-1.4.5.gemspec	2011-04-28 14:14:40.659423557 -0400
-@@ -31,74 +31,71 @@ for those one-off tasks, with a language
+diff -up specifications/buildr-1.4.6.gemspec.fixversion specifications/buildr-1.4.6.gemspec
+--- specifications/buildr-1.4.6.gemspec.fixversion	2011-11-29 11:27:29.636970792 -0500
++++ specifications/buildr-1.4.6.gemspec	2011-11-29 11:30:30.894110930 -0500
+@@ -24,74 +24,74 @@ Gem::Specification.new do |s|
      s.specification_version = 3
  
      if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
@@ -23,11 +23,12 @@ diff -up specifications/buildr-1.4.5.gemspec.fixversion specifications/buildr-1.
 -      s.add_runtime_dependency(%q<rspec>, ["= 2.1.0"])
 -      s.add_runtime_dependency(%q<xml-simple>, ["= 1.0.12"])
 -      s.add_runtime_dependency(%q<minitar>, ["= 0.5.3"])
+-      s.add_development_dependency(%q<jekyll>, ["~> 0.10.0"])
 +      s.add_runtime_dependency(%q<rake>, [">= 0.8.7"])
 +      s.add_runtime_dependency(%q<builder>, [">= 2.1.2"])
 +      s.add_runtime_dependency(%q<net-ssh>, [">= 2.0.23"])
 +      s.add_runtime_dependency(%q<net-sftp>, [">= 2.0.4"])
-+      s.add_runtime_dependency(%q<rubyzip>, [">= 0.9.1"])
++      s.add_runtime_dependency(%q<rubyzip>, [">= 0.9.4"])
 +      s.add_runtime_dependency(%q<highline>, [">= 1.5.1"])
 +      s.add_runtime_dependency(%q<json_pure>, [">= 1.4.3"])
 +      s.add_runtime_dependency(%q<rubyforge>, [">= 2.0.3"])
@@ -38,9 +39,10 @@ diff -up specifications/buildr-1.4.5.gemspec.fixversion specifications/buildr-1.
 +      s.add_runtime_dependency(%q<rspec-expectations>, [">= 2.1.0"])
 +      s.add_runtime_dependency(%q<rspec-mocks>, [">= 2.1.0"])
 +      s.add_runtime_dependency(%q<rspec-core>, [">= 2.1.0"])
++      s.add_runtime_dependency(%q<rspec>, [">= 2.1.0"])
 +      s.add_runtime_dependency(%q<xml-simple>, [">= 1.0.12"])
 +      s.add_runtime_dependency(%q<minitar>, [">= 0.5.3"])
-       s.add_development_dependency(%q<jekyll>, ["~> 0.6.2"])
++      s.add_development_dependency(%q<jekyll>, [">= 0.10.0"])
        s.add_development_dependency(%q<sdoc>, [">= 0"])
 -      s.add_development_dependency(%q<rcov>, ["= 0.9.9"])
 +      s.add_development_dependency(%q<rcov>, [">= 0.9.9"])
@@ -64,6 +66,7 @@ diff -up specifications/buildr-1.4.5.gemspec.fixversion specifications/buildr-1.
 -      s.add_dependency(%q<rspec>, ["= 2.1.0"])
 -      s.add_dependency(%q<xml-simple>, ["= 1.0.12"])
 -      s.add_dependency(%q<minitar>, ["= 0.5.3"])
+-      s.add_dependency(%q<jekyll>, ["~> 0.10.0"])
 +      s.add_dependency(%q<rake>, [">= 0.8.7"])
 +      s.add_dependency(%q<builder>, [">= 2.1.2"])
 +      s.add_dependency(%q<net-ssh>, [">= 2.0.23"])
@@ -79,9 +82,10 @@ diff -up specifications/buildr-1.4.5.gemspec.fixversion specifications/buildr-1.
 +      s.add_dependency(%q<rspec-expectations>, [">= 2.1.0"])
 +      s.add_dependency(%q<rspec-mocks>, [">= 2.1.0"])
 +      s.add_dependency(%q<rspec-core>, [">= 2.1.0"])
++      s.add_dependency(%q<rspec>, [">= 2.1.0"])
 +      s.add_dependency(%q<xml-simple>, [">= 1.0.12"])
 +      s.add_dependency(%q<minitar>, [">= 0.5.3"])
-       s.add_dependency(%q<jekyll>, ["~> 0.6.2"])
++      s.add_dependency(%q<jekyll>, [">= 0.10.0"])
        s.add_dependency(%q<sdoc>, [">= 0"])
 -      s.add_dependency(%q<rcov>, ["= 0.9.9"])
 +      s.add_dependency(%q<rcov>, [">= 0.9.9"])
@@ -106,6 +110,7 @@ diff -up specifications/buildr-1.4.5.gemspec.fixversion specifications/buildr-1.
 -    s.add_dependency(%q<rspec>, ["= 2.1.0"])
 -    s.add_dependency(%q<xml-simple>, ["= 1.0.12"])
 -    s.add_dependency(%q<minitar>, ["= 0.5.3"])
+-    s.add_dependency(%q<jekyll>, ["~> 0.10.0"])
 +    s.add_dependency(%q<rake>, [">= 0.8.7"])
 +    s.add_dependency(%q<builder>, [">= 2.1.2"])
 +    s.add_dependency(%q<net-ssh>, [">= 2.0.23"])
@@ -121,9 +126,10 @@ diff -up specifications/buildr-1.4.5.gemspec.fixversion specifications/buildr-1.
 +    s.add_dependency(%q<rspec-expectations>, [">= 2.1.0"])
 +    s.add_dependency(%q<rspec-mocks>, [">= 2.1.0"])
 +    s.add_dependency(%q<rspec-core>, [">= 2.1.0"])
++    s.add_dependency(%q<rspec>, [">= 2.1.0"])
 +    s.add_dependency(%q<xml-simple>, [">= 1.0.12"])
 +    s.add_dependency(%q<minitar>, [">= 0.5.3"])
-     s.add_dependency(%q<jekyll>, ["~> 0.6.2"])
++    s.add_dependency(%q<jekyll>, [">= 0.10.0"])
      s.add_dependency(%q<sdoc>, [">= 0"])
 -    s.add_dependency(%q<rcov>, ["= 0.9.9"])
 +    s.add_dependency(%q<rcov>, [">= 0.9.9"])

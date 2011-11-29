@@ -12,7 +12,7 @@ Group: Development/Languages
 License: GPLv2+ or Ruby
 URL: http://buildr.apache.org/
 Source0: http://rubygems.org/gems/%{gemname}-%{version}.gem
-Patch0: buildr-1.4.5-fixversion.patch
+Patch0: buildr-1.4.6-fixversion.patch
 Patch1: buildr-1.4.3-fixwarning.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Requires: rubygems
