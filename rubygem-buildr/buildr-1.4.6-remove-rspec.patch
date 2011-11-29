@@ -1,0 +1,27 @@
+diff -up specifications/buildr-1.4.6.gemspec.norspec specifications/buildr-1.4.6.gemspec
+--- specifications/buildr-1.4.6.gemspec.norspec	2011-11-29 15:27:06.258052169 -0500
++++ specifications/buildr-1.4.6.gemspec	2011-11-29 15:27:25.858285074 -0500
+@@ -39,7 +39,6 @@ Gem::Specification.new do |s|
+       s.add_runtime_dependency(%q<rspec-expectations>, [">= 2.1.0"])
+       s.add_runtime_dependency(%q<rspec-mocks>, [">= 2.1.0"])
+       s.add_runtime_dependency(%q<rspec-core>, [">= 2.1.0"])
+-      s.add_runtime_dependency(%q<rspec>, [">= 2.1.0"])
+       s.add_runtime_dependency(%q<xml-simple>, [">= 1.0.12"])
+       s.add_runtime_dependency(%q<minitar>, [">= 0.5.3"])
+       s.add_development_dependency(%q<jekyll>, [">= 0.10.0"])
+@@ -62,7 +61,6 @@ Gem::Specification.new do |s|
+       s.add_dependency(%q<rspec-expectations>, [">= 2.1.0"])
+       s.add_dependency(%q<rspec-mocks>, [">= 2.1.0"])
+       s.add_dependency(%q<rspec-core>, [">= 2.1.0"])
+-      s.add_dependency(%q<rspec>, [">= 2.1.0"])
+       s.add_dependency(%q<xml-simple>, [">= 1.0.12"])
+       s.add_dependency(%q<minitar>, [">= 0.5.3"])
+       s.add_dependency(%q<jekyll>, [">= 0.10.0"])
+@@ -86,7 +84,6 @@ Gem::Specification.new do |s|
+     s.add_dependency(%q<rspec-expectations>, [">= 2.1.0"])
+     s.add_dependency(%q<rspec-mocks>, [">= 2.1.0"])
+     s.add_dependency(%q<rspec-core>, [">= 2.1.0"])
+-    s.add_dependency(%q<rspec>, [">= 2.1.0"])
+     s.add_dependency(%q<xml-simple>, [">= 1.0.12"])
+     s.add_dependency(%q<minitar>, [">= 0.5.3"])
+     s.add_dependency(%q<jekyll>, [">= 0.10.0"])
