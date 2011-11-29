@@ -7,7 +7,7 @@
 Summary: Build like you code
 Name: rubygem-%{gemname}
 Version: 1.4.6
-Release: 1%{?dist}
+Release: 2%{?dist}
 Group: Development/Languages
 License: GPLv2+ or Ruby
 URL: http://buildr.apache.org/
@@ -86,6 +86,11 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Tue Nov 29 2011 jesus m. rodriguez <jesusr@redhat.com> 1.4.6-2
+- upgrade to rubyzip 0.9.4
+- fix up gemspec patch
+- upgrade to 1.4.6
+
 * Wed May 18 2011 jesus m rodriguez <jmrodri@gmail.com> 1.4.5-4
 - rpmlint: remove hidden file
 - rpmlint: remove backup files
