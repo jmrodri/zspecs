@@ -7,7 +7,7 @@
 Summary: Build like you code
 Name: rubygem-%{gemname}
 Version: 1.4.6
-Release: 4%{?dist}
+Release: 5%{?dist}
 Group: Development/Languages
 License: GPLv2+ or Ruby
 URL: http://buildr.apache.org/
@@ -90,6 +90,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Fri Dec 09 2011 jesus m. rodriguez <jesusr@redhat.com> 1.4.6-5
+- remove patch remnants
+
 * Fri Dec 09 2011 jesus m. rodriguez <jesusr@redhat.com> 1.4.6-4
 - requires 0.8.7 as newer versions break buildr
 
