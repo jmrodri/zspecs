@@ -17,7 +17,7 @@ Patch1: buildr-1.4.3-fixwarning.patch
 Patch2: buildr-1.4.6-remove-rspec.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Requires: rubygems
-Requires: rubygem(rake) >= 0.8.7
+Requires: rubygem(rake) = 0.8.7
 Requires: rubygem(builder) >= 2.1.2
 Requires: rubygem(net-ssh) >= 2.0.23
 Requires: rubygem(net-sftp) >= 2.0.4
