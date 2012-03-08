@@ -1,7 +1,7 @@
 Summary: The LDAP Class Libraries for Java (JLDAP)
 Name: jldap
 Version: 4.3
-Release: 0%{?dist}
+Release: 1%{?dist}
 Group: Applications/Productivity
 License: GPLv2
 URL: http://www.ngolde.de/tpp.html
@@ -64,3 +64,6 @@ ln -s %{_datadir}/java/%{name}-%{version}.jar $RPM_BUILD_ROOT%{_datadir}/java/%{
 %doc %{_datadir}/javadoc/%{name}-%{version}/
 
 %changelog
+* Thu Mar 08 2012 jesus m. rodriguez <jesusr@redhat.com> 4.3-1
+- new package built with tito
+
