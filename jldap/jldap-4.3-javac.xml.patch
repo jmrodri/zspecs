@@ -1,0 +1,19 @@
+diff -up jldap-4.3/javac.xml.build jldap-4.3/javac.xml
+--- jldap-4.3/javac.xml.build	2012-03-08 10:49:21.148441222 -0500
++++ jldap-4.3/javac.xml	2012-03-08 10:51:19.569837424 -0500
+@@ -54,7 +54,6 @@
+                 includes="com/novell/**/*.java,jldap/com/novell/security/sasl/*.java,org/ietf/**/*.java"
+                 excludes="com/novell/services/**/*.java,${exclude.dsmlconnection},${exclude.spmlconnection}"
+                 destdir="${build.debug}"
+-                target="1.2"
+                 deprecation="off"
+                 debug="on"
+                 optimize="off">
+@@ -92,7 +91,6 @@
+                 includes="com/novell/**/*.java,jldap/com/novell/security/sasl/*.java,org/ietf/**/*.java"
+                 excludes="com/novell/services/**/*.java"
+                 destdir="${build}"
+-                target="1.2"
+                 deprecation="off"
+                 debug="off"
+                 optimize="on">
