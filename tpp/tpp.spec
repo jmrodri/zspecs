@@ -1,7 +1,7 @@
 Summary: A ncurses-based presentation tool
 Name: tpp
 Version: 1.3.1
-Release: 13%{?dist}
+Release: 14%{?dist}
 Group: Applications/Productivity
 License: GPLv2
 URL: http://www.ngolde.de/tpp.html
@@ -61,6 +61,9 @@ install -p -m 644 doc/tpp.1 $RPM_BUILD_ROOT%{_mandir}/man1/tpp.1
 %{_datadir}/vim/vimfiles/syntax/tpp.vim
 
 %changelog
+* Wed Jan 15 2014 jesus m. rodriguez <jesusr@redhat.com> 1.3.1-14
+- 977368: remove invalid vim-filesystem dependency (maxamillion@fedoraproject.org)
+
 * Sun Aug 04 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.3.1-13
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_20_Mass_Rebuild
 
