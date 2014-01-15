@@ -1,13 +1,13 @@
 Summary: A ncurses-based presentation tool
 Name: tpp
 Version: 1.3.1
-Release: 9%{?dist}
+Release: 13%{?dist}
 Group: Applications/Productivity
 License: GPLv2
 URL: http://www.ngolde.de/tpp.html
 Source0: http://www.ngolde.de/download/%{name}-%{version}.tar.gz
 BuildRequires: emacs
-Requires: ruby(abi) >= 1.8
+Requires: ruby(release)
 Requires: ruby-ncurses
 Requires: vim-filesystem
 %if 0%{?fedora} >= 15
@@ -61,6 +61,18 @@ install -p -m 644 doc/tpp.1 $RPM_BUILD_ROOT%{_mandir}/man1/tpp.1
 %{_datadir}/vim/vimfiles/syntax/tpp.vim
 
 %changelog
+* Sun Aug 04 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.3.1-13
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_20_Mass_Rebuild
+
+* Tue Apr 02 2013 Vít Ondruch <vondruch@redhat.com> - 1.3.1-12
+- Rebuild for https://fedoraproject.org/wiki/Features/Ruby_2.0.0
+
+* Fri Feb 15 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.3.1-11
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_19_Mass_Rebuild
+
+* Sat Jul 21 2012 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.3.1-10
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_18_Mass_Rebuild
+
 * Wed Jun 01 2011 jesus m rodriguez <jmrodri@gmail.com> 1.3.1-9
 - added email address to the changelog
 - removed doc contrib from files section
