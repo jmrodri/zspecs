@@ -6,6 +6,7 @@ Group: Applications/Productivity
 License: GPLv2
 URL: http://www.ngolde.de/tpp.html
 Source0: http://www.ngolde.de/download/%{name}-%{version}.tar.gz
+Patch0: c0a755be54bd69333adc6cfb0071fcb5260404d6.patch
 BuildRequires: emacs
 Requires: ruby(release)
 Requires: ruby-ncurses
@@ -23,6 +24,7 @@ ncurses - ranging from an old VT100 to the Linux framebuffer to an xterm.
 
 %prep
 %setup -q
+%patch0 -p1
 pushd examples
 for tppfile in *.tpp; do 
   iconv -f ISO-8859-1 -t UTF-8 -o $tppfile.new $tppfile && \
