@@ -1,7 +1,7 @@
 Summary: A ncurses-based presentation tool
 Name: tpp
 Version: 1.3.1
-Release: 15%{?dist}
+Release: 16%{?dist}
 Group: Applications/Productivity
 License: GPLv2
 URL: http://www.ngolde.de/tpp.html
@@ -65,6 +65,10 @@ install -p -m 644 doc/tpp.1 $RPM_BUILD_ROOT%{_mandir}/man1/tpp.1
 %{_datadir}/vim/vimfiles/syntax/tpp.vim
 
 %changelog
+* Sat Jan 18 2014 jesus m. rodriguez <jmrodri@gmail.com> 1.3.1-16
+- 976686, 976687: add exec patch to spec file (jmrodri@gmail.com)
+- 976686, 976687: Don't execute commands with --exec by default (abe@debian.org)
+
 * Wed Jan 15 2014 jesus m. rodriguez <jmrodri@gmail.com> 1.3.1-15
 - patch to make it work (jmrodri@gmail.com)
 
