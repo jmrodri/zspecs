@@ -1,7 +1,7 @@
 Summary: A ncurses-based presentation tool
 Name: tpp
 Version: 1.3.1
-Release: 16%{?dist}
+Release: 17%{?dist}
 Group: Applications/Productivity
 License: GPLv2
 URL: http://www.ngolde.de/tpp.html
@@ -67,6 +67,10 @@ install -p -m 644 doc/tpp.1 $RPM_BUILD_ROOT%{_mandir}/man1/tpp.1
 %{_datadir}/vim/vimfiles/syntax/tpp.vim
 
 %changelog
+* Fri Jan 31 2014 jesus m. rodriguez <jesusr@redhat.com> 1.3.1-17
+- 977368: apply Adam Miller's patch correctly. (jesusr@redhat.com)
+- Remove dep on vim-filesystem for EPEL6, subpackage doesn't exist for EL6 (maxamillion@fedoraproject.org)
+- Fix ruby macros for EPEL6 (maxamillion@fedoraproject.org)
 * Sat Jan 18 2014 jesus m. rodriguez <jmrodri@gmail.com> 1.3.1-16
 - 976686, 976687: add exec patch to spec file (jmrodri@gmail.com)
 - 976686, 976687: Don't execute commands with --exec by default (abe@debian.org)
