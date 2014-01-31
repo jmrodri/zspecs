@@ -9,11 +9,13 @@ Source0: http://www.ngolde.de/download/%{name}-%{version}.tar.gz
 Patch0: c0a755be54bd69333adc6cfb0071fcb5260404d6.patch
 Patch1: 15-optional-exec.patch
 BuildRequires: emacs
-Requires: ruby(release)
 Requires: ruby-ncurses
-Requires: vim-filesystem
 %if 0%{?fedora} >= 15
+Requires: ruby(release)
 Requires: emacs-filesystem >= %{_emacs_version} 
+Requires: vim-filesystem
+%else
+Requires: ruby(abi) >= 1.8
 %endif
 BuildArch: noarch
 
