@@ -1,7 +1,7 @@
 Summary: A telecommunications application software
 Name: skype-compat
 Version: 4.3.0.37
-Release: 1%{?dist}
+Release: 2%{?dist}
 Group: Internet/Communications
 License: GPLv2
 URL: http://github.com/jmrodri/zspecs/skype-compat
@@ -30,3 +30,6 @@ ln -s /opt/skype-%{version}/avatars/ %{_datadir}/skype/avatars
 %{_datadir}/skype
 
 %changelog
+* Tue Jan 06 2015 jesus m. rodriguez <jmrodri@gmail.com> 4.3.0.37-2
+- new package built with tito
+
