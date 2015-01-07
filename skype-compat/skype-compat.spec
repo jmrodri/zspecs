@@ -19,10 +19,12 @@ to other devices
 install -d -m 755 $RPM_BUILD_ROOT%{_bindir}
 install -d -m 755 $RPM_BUILD_ROOT%{_datadir}/skype
 
-ln -s /opt/skype-%{version}/skype %{_binddir}/skype
-ln -s /opt/skype-%{version}/sounds/ %{_datadir}/skype/sounds
-ln -s /opt/skype-%{version}/lang/ %{_datadir}/skype/lang
-ln -s /opt/skype-%{version}/avatars/ %{_datadir}/skype/avatars
+pushd $RPM_BUILD_ROOT
+ln -sf /opt/skype-%{version}/skype $RPM_BUILD_ROOT%{_bindir}/skype
+ln -sf /opt/skype-%{version}/sounds/ $RPM_BUILD_ROOT%{_datadir}/skype/sounds
+ln -sf /opt/skype-%{version}/lang/ $RPM_BUILD_ROOT%{_datadir}/skype/lang
+ln -sf /opt/skype-%{version}/avatars/ $RPM_BUILD_ROOT%{_datadir}/skype/avatars
+popd
 
 %files
 %defattr(-, root, root, -)
